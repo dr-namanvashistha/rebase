@@ -138,7 +138,7 @@ class GitCommandManager {
     }
     fetch(refSpec, remoteName, options) {
         return __awaiter(this, void 0, void 0, function* () {
-            const args = ['-c', 'protocol.version=2', 'fetch'];
+            const args = ['fetch', '--all'];
             if (!refSpec.some(x => x === tagsRefSpec)) {
                 args.push('--no-tags');
             }
